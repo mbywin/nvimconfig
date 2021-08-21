@@ -66,6 +66,8 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'machakann/vim-highlightedyank'
 " 多光标编辑插件
 Plug 'terryma/vim-multiple-cursors'
+" golang debug 插件
+Plug 'sebdah/vim-delve'
 call plug#end()
 
 " 定义Leader
@@ -123,7 +125,7 @@ nmap sn <Plug>(ale_next_wrap)
 "<Leader>s触发/关闭语法检查
 " nmap <Leader>l :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
-nmap <Leader>d :ALEDetail<CR>
+" nmap <Leader>d :ALEDetail<CR>
 let g:ale_linters = {
     \ 'go': ['golint', 'go vet', 'go fmt'],
     \ 'python': ['flake8', 'pylint'],
@@ -223,3 +225,6 @@ let g:highlightedyank_highlight_duration = 1000
 
 " 多光标编辑插件
 " < ctrl-n > < ctrl-x > press c
+
+" golang debug 插件
+let g:delve_backend = "native"
