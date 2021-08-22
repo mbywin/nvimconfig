@@ -73,8 +73,8 @@ call plug#end()
 " 定义Leader
 let mapleader = "\<space>"
 " 主题配置
-colorscheme gruvbox
-set background=light
+colorscheme gruvbox             "设置主题为 gruvbox
+set bg=dark                     "设置背景为黑色
 " 代码补全插件
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
