@@ -10,6 +10,7 @@ set nocursorline
 set backspace=2
 set cursorline "突出显示当前行
 set showmatch " 显示括号匹配
+set tags=./tags,tags;$HOME
 
 filetype plugin indent on
 syntax on
@@ -68,6 +69,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'terryma/vim-multiple-cursors'
 " golang debug 插件
 Plug 'sebdah/vim-delve'
+" java 自动补全插件
+Plug 'artur-shaik/vim-javacomplete2'
 call plug#end()
 
 " 定义Leader
@@ -232,3 +235,6 @@ let g:delve_backend = "native"
 if !has('python3')
   let g:python3_host_prog='/usr/bin/local/python3'
 endif
+
+" java 自动补全配置
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
