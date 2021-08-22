@@ -229,5 +229,4 @@ let g:highlightedyank_highlight_duration = 1000
 " golang debug 插件
 let g:delve_backend = "native"
 
-let g:python3_host_prog='/usr/bin/python3'
-
+let g:python3_host_prog='/usr/local/bin/python3'
