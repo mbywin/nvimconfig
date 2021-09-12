@@ -159,6 +159,17 @@ function! s:defx_mappings() abort
   nnoremap <silent><buffer><expr> l     <SID>defx_toggle_tree()                    " 打开或者关闭文件夹，文件
   nnoremap <silent><buffer><expr> .     defx#do_action('toggle_ignored_files')     " 显示隐藏文件
   nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
+  setl nonu                            " 勿在 defx 栏显示行号
+  nnoremap <silent><buffer><expr> <CR>
+            \ defx#is_directory() ?
+            \ defx#do_action('open_or_close_tree') :
+            \ defx#do_action('drop',)
+  nnoremap <silent><buffer><expr> c defx#do_action('copy')
+  nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
+  nnoremap <silent><buffer><expr> N defx#do_action('new_file')
+  nnoremap <silent><buffer><expr> dd defx#do_action('remove_trash')
+  nnoremap <silent><buffer><expr> mm defx#do_action('move')
+  nnoremap <silent><buffer><expr> pp defx#do_action('paste')
 endfunction
 
 function! s:defx_toggle_tree() abort
@@ -171,6 +182,7 @@ endfunction
 
 " 打开目录树
 nmap <silent> <Leader>nt :Defx <cr>
+nmap <silent> <leader>e :Defx -columns=indent:icons:filename:type<cr>
 
 " 共享clip
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
