@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/root/project/devops/openapi/handlers/v4'
+let g:netrw_dirhist_7='/root/project/devops/openapi/handlers'
+let g:netrw_dirhist_6='/root/project/devops/openapi'
+let g:netrw_dirhist_5='/root/project/devops/openapi/handlers/v4'
+let g:netrw_dirhist_4='/root/project/devops/openapi/handlers'
+let g:netrw_dirhist_3='/root/project/devops/openapi'
+let g:netrw_dirhist_2='/root/project/devops/openapi/handlers/v4'
+let g:netrw_dirhist_1='/root/project/devops/openapi/handlers'
+let g:netrw_dirhist_0='/root/project/devops/openapi'
+let g:netrw_dirhist_9='/root/project/devops/openapi/handlers/v4'
