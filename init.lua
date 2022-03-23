@@ -14,3 +14,10 @@ require("plugin-config.bufferline")
 require("plugin-config.lualine")
 -- 模糊查询工具
 require("plugin-config.telescope")
+-- 共享剪贴板
+require("plugin-config.clip")
+-- dashboard配置
+require("plugin-config.dashboard")
+require("plugin-config.project")
+-- 代码高亮
+require("plugin-config.nvim-treesitter")

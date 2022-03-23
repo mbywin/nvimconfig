@@ -16,6 +16,20 @@ packer.startup({
     use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
     use "LinArcX/telescope-env.nvim"
     use {"ray-x/go.nvim"}
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      }
+    }
+    -- 代码补全插件
+    use {"Shougo/deoplete.nvim"}
+    -- dashboard-nvim (新增)
+    use("glepnir/dashboard-nvim")
+    -- project
+    use("ahmedkhalf/project.nvim")
+    -- treesitter （新增）
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   end,
   config = {
     -- 并发数限制
