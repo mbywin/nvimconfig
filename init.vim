@@ -1,13 +1,14 @@
 set number
-set shiftwidth =4
 set tabstop=4
+set shiftwidth=4
+set expandtab
+
 set encoding=utf-8
 set hlsearch
 set autoindent
 set clipboard=unnamed
 set nocursorcolumn              " Do not highlight column (speeds up highlighting)
 set nocursorline 
-set backspace=2
 set cursorline "突出显示当前行
 set showmatch " 显示括号匹配
 set tags=./tags,tags;$HOME
@@ -18,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 " 主题
 Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 " 代码补全插件
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -71,13 +73,24 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'sebdah/vim-delve'
 " java 自动补全插件
 Plug 'artur-shaik/vim-javacomplete2'
+" markdown 插件
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Jenkinsfile 语法
+Plug 'martinda/Jenkinsfile-vim-syntax'
+" 缩进线
+Plug 'Yggdroot/indentLine'
+
 call plug#end()
 
 " 定义Leader
 let mapleader = "\<space>"
 " 主题配置
-colorscheme gruvbox             "设置主题为 gruvbox
-set bg=dark                     "设置背景为黑色
+"colorscheme gruvbox             "设置主题为 gruvbox
+let ayucolor="light"
+set termguicolors           "enable true colors support
+"set bg=light                     "设置背景为黑色
+colorscheme ayu             "设置主题为 gruvbox
 " 代码补全插件
 let g:deoplete#enable_at_startup = 1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -250,3 +263,6 @@ endif
 
 " java 自动补全配置
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" markdown preview
+nnoremap <leader>mm :MarkdownPreview<cr>
