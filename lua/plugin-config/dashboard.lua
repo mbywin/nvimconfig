@@ -1,5 +1,5 @@
 vim.g.dashboard_default_executive = "telescope"
-vim.g.dashboard_custom_footer = { "https://github.com/mbywin/nvimconfig.git" }
+vim.g.dashboard_custom_footer = { "https://github.com/mbywin" }
 
 vim.g.dashboard_custom_section = {
   a = { description = { "  Projects              " }, command = "Telescope projects" },
@@ -7,9 +7,65 @@ vim.g.dashboard_custom_section = {
   c = { description = { "  Edit keybindings      " }, command = "edit ~/.config/nvim/lua/keybindings.lua" },
   d = { description = { "  Edit Projects         " }, command = "edit ~/.local/share/nvim/project_nvim/project_history", },
   -- e = { description = { "  Edit .bashrc          " }, command = "edit ~/.bashrc" },
-  -- f = { description = { "  Edit init.lua         " }, command = "edit ~/.config/nvim/init.lua" },
-  -- g = { description = {'  Find file          '}, command = 'Telescope find_files'},
-  -- h = { description = {'  Find text          '}, command = 'Telescope live_grep'},
+  -- f = { description = { "  Change colorscheme    " }, command = "ChangeColorScheme" },
+  -- g = { description = { "  Edit init.lua         " }, command = "edit ~/.config/nvim/init.lua" },
+  -- h = { description = {'  Find file          '}, command = 'Telescope find_files'},
+  -- i = { description = {'  Find text          '}, command = 'Telescope live_grep'},
+}
+
+vim.g.dashboard_custom_header = {
+  [[███╗   ██╗███████╗██╗  ██╗███████╗███╗   ██╗]],
+  [[████╗  ██║██╔════╝██║  ██║██╔════╝████╗  ██║]],
+  [[██╔██╗ ██║███████╗███████║█████╗  ██╔██╗ ██║]],
+  [[██║╚██╗██║╚════██║██╔══██║██╔══╝  ██║╚██╗██║]],
+  [[██║ ╚████║███████║██║  ██║███████╗██║ ╚████║]],
+  [[╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═══╝]],
+}
+
+vim.g.dashboard_custom_header = {
+    [[          ▀████▀▄▄              ▄█ ]],
+    [[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
+    [[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
+    [[   ▄▀ ▀▄      ▀▄              ▀▄▀  ]],
+    [[  ▄▀    █     █▀   ▄█▀▄      ▄█    ]],
+    [[  ▀▄     ▀▄  █     ▀██▀     ██▄█   ]],
+    [[   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ]],
+    [[    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ]],
+    [[   █   █  █      ▄▄           ▄▀   ]],
+}
+
+vim.g.dashboard_custom_header = {
+  [[ ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗]],
+  [[ ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║]],
+  [[ ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║]],
+  [[ ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║]],
+  [[ ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║]],
+  [[ ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
+  [[                                                   ]],
+  [[                [ version : 1.0.0 ]                ]],
+}
+
+
+vim.g.dashboard_custom_header = {
+  [[     ██╗██╗   ██╗███████╗     ██╗██╗███╗   ██╗    ██████╗███╗   ██╗]],
+  [[     ██║██║   ██║██╔════╝     ██║██║████╗  ██║   ██╔════╝████╗  ██║]],
+  [[     ██║██║   ██║█████╗       ██║██║██╔██╗ ██║   ██║     ██╔██╗ ██║]],
+  [[██   ██║██║   ██║██╔══╝  ██   ██║██║██║╚██╗██║   ██║     ██║╚██╗██║]],
+  [[╚█████╔╝╚██████╔╝███████╗╚█████╔╝██║██║ ╚████║██╗╚██████╗██║ ╚████║]],
+  [[ ╚════╝  ╚═════╝ ╚══════╝ ╚════╝ ╚═╝╚═╝  ╚═══╝╚═╝ ╚═════╝╚═╝  ╚═══╝]],
+  [[                                                                   ]],
+  [[                         [ version : 1.0.0 ]                       ]],
+}
+
+vim.g.dashboard_custom_header = {
+[[     ██╗██╗   ██╗███████╗     ██╗██╗███╗   ██╗]],
+[[     ██║██║   ██║██╔════╝     ██║██║████╗  ██║]],
+[[     ██║██║   ██║█████╗       ██║██║██╔██╗ ██║]],
+[[██   ██║██║   ██║██╔══╝  ██   ██║██║██║╚██╗██║]],
+[[╚█████╔╝╚██████╔╝███████╗╚█████╔╝██║██║ ╚████║]],
+[[ ╚════╝  ╚═════╝ ╚══════╝ ╚════╝ ╚═╝╚═╝  ╚═══╝]],
+[[                                              ]],
+[[             [ version : 1.0.0 ]              ]],
 }
 
 vim.g.dashboard_custom_header = {
