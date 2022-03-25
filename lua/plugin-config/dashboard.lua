@@ -1,5 +1,5 @@
 vim.g.dashboard_default_executive = "telescope"
-vim.g.dashboard_custom_footer = { "https://github.com/mbywin" }
+vim.g.dashboard_custom_footer = { "https://github.com/nshen/learn-neovim-lua" }
 
 vim.g.dashboard_custom_section = {
   a = { description = { "  Projects              " }, command = "Telescope projects" },
@@ -66,16 +66,4 @@ vim.g.dashboard_custom_header = {
 [[ ╚════╝  ╚═════╝ ╚══════╝ ╚════╝ ╚═╝╚═╝  ╚═══╝]],
 [[                                              ]],
 [[             [ version : 1.0.0 ]              ]],
-}
-
-vim.g.dashboard_custom_header = {
-    [[          ▀████▀▄▄              ▄█ ]],
-    [[            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ]],
-    [[    ▄        █          ▀▀▀▀▄  ▄▀  ]],
-    [[   ▄▀ ▀▄      ▀▄              ▀▄▀  ]],
-    [[  ▄▀    █     █▀   ▄█▀▄      ▄█    ]],
-    [[  ▀▄     ▀▄  █     ▀██▀     ██▄█   ]],
-    [[   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ]],
-    [[    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ]],
-    [[   █   █  █      ▄▄           ▄▀   ]],
 }
